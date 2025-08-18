@@ -20,7 +20,27 @@ RDEPEND="sys-apps/caelestia-cli
          app-misc/cliphist
          net-wireless/bluez-tools
          sys-fs/inotify-tools
-         
+         sys-apps/app2unit
+         media-video/wireplumber
+         app-misc/trash-cli
+         gui-apps/foot
+         app-shells/fish
+         app-misc/fastfetch
+         app-shells/starship
+         sys-process/btop
+         app-misc/jq
+         net-misc/socat
+         media-gfx/imagemagick
+         net-misc/curl
+         x11-themes/adw-gtk3
+         x11-themes/papirus-icon-theme
+         x11-misc/qt5ct
+         gui-apps/qt6ct
+         media-fonts/jetbrains-mono
+         media-fonts/symbols-nerd-font
+         uswm? ( gui-apps/uwsm )
+         gnome-keyring? ( gnome-base/gnome-keyring )
+         polkit-gnome? ( gnome-extra/polkit-gnome )
          "
 
 DEPEND=""
