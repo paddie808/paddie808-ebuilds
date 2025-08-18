@@ -13,7 +13,7 @@ RDEPEND="sys-apps/caelestia-cli
          gui-wm/caelestia-shell
          gui-wm/hyprland
          gui-libs/xdg-desktop-portal-hyprland
-         sys-apps/edg-desktop-portal-gtk
+         sys-apps/xdg-desktop-portal-gtk
          gui-apps/hyprpicker
          gui-apps/hypridle
          gui-apps/wl-clipboard
