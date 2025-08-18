@@ -3,7 +3,7 @@
 
 EAPI=8
 
-DISTUTILS_USE_PEP517=no
+DISTUTILS_USE_PEP517=setuptools
 EPYTHON=/usr/bin/python
 PYTHON_COMPAT=( python3_{10..13} )
 
@@ -23,6 +23,10 @@ RDEPEND=${DEPEND}
 
 BDEPEND="dev-vcs/git"
 
+src_compile() {
+    distutils-r1_python_compile
+}
+
 src_install() {
-    esetup.py
+    distutils-r1_python_install
 }
