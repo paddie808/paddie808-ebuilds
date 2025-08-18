@@ -22,11 +22,3 @@ DEPEND=""
 RDEPEND=${DEPEND}
 
 BDEPEND="dev-vcs/git"
-
-src_compile() {
-    distutils-r1_python_compile
-}
-
-src_install() {
-    distutils-r1_python_install
-}
