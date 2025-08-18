@@ -22,10 +22,6 @@ RDEPEND=${DEPEND}
 
 BDEPEND="dev-vcs/git"
 
-src_compile() {
-    esetup.py
-}
-
 src_install() {
-    distutils-r1_python_install
+    esetup.py
 }
