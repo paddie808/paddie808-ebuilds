@@ -9,6 +9,7 @@ EGIT_REPO_URI=https://github.com/Vladimir-csp/app2unit.git
 
 LICENSE="GPL-3.0"
 SLOT="0"
+KEYWORDS="~amd64 ~arm64"
 
 DEPENDS="x11-libs/libnotify
          app-alternatives/sh
