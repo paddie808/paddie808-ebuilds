@@ -28,7 +28,6 @@ DEPEND="sys-apps/caelestia-cli
         media-video/pipewire
         sys-libs/glibc
         sys-power/power-profiles-daemon
-        media-fonts/rubik
         gui-apps/grim
         gui-apps/swappy
         sci-libs/libqalculate
