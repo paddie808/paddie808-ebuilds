@@ -33,13 +33,14 @@ DEPEND="dev-lang/python
         "
 RDEPEND=${DEPEND}
 
-BDEPEND="dev-vcs/git"
+BDEPEND="dev-vcs/git
+         dev-python/installer"
 
 src_compile() {
     disutils-r1_python_compile
 }
 
 src_install() {
-    distutils-r1_python_install
+    python -m installer --destdir="${D}" dist/*.whl || die
     dofishcomp completions/caelestia.fish
 }
