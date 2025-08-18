@@ -27,7 +27,6 @@ DEPEND="dev-lang/python
         sys-apps/app2unit
         gui-apps/wl-clipboard
         gui-apps/slurp
-        media-video/wl-screenrec
         gnome-base/dconf
         media-libs/libpulse
         "
