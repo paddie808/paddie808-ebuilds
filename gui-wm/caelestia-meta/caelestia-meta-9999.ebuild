@@ -17,7 +17,6 @@ RDEPEND="sys-apps/caelestia-cli
          gui-apps/hyprpicker
          gui-apps/hypridle
          gui-apps/wl-clipboard
-         app-misc/cliphist
          net-wireless/bluez-tools
          sys-fs/inotify-tools
          sys-apps/app2unit
