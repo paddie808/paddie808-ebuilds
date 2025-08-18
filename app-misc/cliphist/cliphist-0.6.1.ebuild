@@ -7,7 +7,7 @@ inherit go-module
 
 DESCRIPTION="Wayland clipboard manager with support for multimedia"
 HOMEPAGE="https://github.com/sentriz/cliphist"
-SRC_URI="https://github.com/henri-gasc/cliphist/archive/v${PV}.tar.gz -> ${P}.gh.tar.gz"
+SRC_URI="https://github.com/sentriz/cliphist/archive/refs/tags/v0.6.1.tar.gz -> ${P}.gh.tar.gz"
 
 LICENSE="GPL-3 MIT BSD"
 SLOT="0"
