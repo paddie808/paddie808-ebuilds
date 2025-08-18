@@ -4,7 +4,7 @@
 EAPI=8
 
 DISTUTILS_USE_PEP517=no
-EPYTHON=python3_13
+EPYTHON=/usr/bin/python
 PYTHON_COMPAT=( python3_{10..13} )
 
 inherit git-r3 distutils-r1 shell-completion
