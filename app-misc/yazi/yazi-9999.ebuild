@@ -35,6 +35,11 @@ DEPEND="sys-apps/file
 RDEPEND="${DEPEND}"
 BDEPEND="dev-vcs/git"
 
+src_prepare() {
+    cargo_gen_config
+    eapply_user
+}
+
 src_compile() {
     cargo_src_compile
 }
