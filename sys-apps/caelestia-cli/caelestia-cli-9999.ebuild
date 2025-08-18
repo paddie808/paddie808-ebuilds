@@ -34,10 +34,11 @@ DEPEND="dev-lang/python
 RDEPEND=${DEPEND}
 
 BDEPEND="dev-vcs/git
+         dev-python/build
          dev-python/installer"
 
 src_compile() {
-    disutils-r1_python_compile
+    python -m build --wheel --no-isolation
 }
 
 src_install() {
