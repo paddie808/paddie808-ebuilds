@@ -1,22 +1,17 @@
-# Copyright 2020-2024 Robert Günzler
+# Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=8
+EAPI=7
 
-inherit xdg
+inherit font
 
-DESCRIPTION="5900+ Material Design Icons form the Community"
-HOMEPAGE="https://materialdesignicons.com/"
-
-SRC_URI="https://github.com/Templarian/MaterialDesign-SVG/archive/refs/tags/v${PV}.tar.gz -> ${PN}.tar.gz"
+DESCRIPTION="Google's Material Design icons fonts (all themes)"
+HOMEPAGE="https://google.github.io/material-design-icons/"
+SRC_URI="https://github.com/google/material-design-icons/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="amd64 arm arm64 ppc64 x86"
+KEYWORDS="~amd64 ~arm64"
 
-S=${WORKDIR}/MaterialDesign-SVG-${PV}
-
-src_install() {
-	insinto /usr/share/icons/mdi/scalable
-	doins -r "${S}"/svg/*
-}
+FONT_SUFFIX="otf ttf"
+FONT_S="${S}/font"
