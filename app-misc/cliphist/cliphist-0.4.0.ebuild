@@ -12,7 +12,7 @@ LICENSE="GPL-3"
 SLOT="0"
 IUSE="+pie"
 
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~arm64"
 RESTRICT="mirror"
 
 RDEPEND="gui-apps/wl-clipboard
