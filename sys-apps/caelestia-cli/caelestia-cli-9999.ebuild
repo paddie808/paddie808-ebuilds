@@ -3,6 +3,7 @@
 
 EAPI=8
 
+EPYTHON=python
 DISTUTILS_USE_PEP517=hatchling
 PYTHON_COMPAT=( python3_{10..13} )
 
