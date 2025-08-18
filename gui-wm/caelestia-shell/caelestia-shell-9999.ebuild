@@ -42,7 +42,7 @@ src_compile() {
 
 src_install() {
     cd ${S}
-    install -Dm755 ${D}./assets/beat_detector /usr/lib/caelestia/beat_detector
+    install -Dm755 ./assets/beat_detector ${D}/usr/lib/caelestia/beat_detector
     rm ./assets/beat_detector
 
     install -dm755 ${D}/etc/xdg/quickshell/caelestia
