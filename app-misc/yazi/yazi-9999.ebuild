@@ -27,7 +27,7 @@ DEPEND="sys-app/file
         ffmpeg? ( media-video/ffmpeg )
         fzf? ( app-shells/fzf )
         imagemagik? ( media-gfx/imagemagik )
-        jq? (app-misc/jq )
+        jq? ( app-misc/jq )
         poppler? ( app-text/poppler )
         ripgrep? ( sys-apps/ripgrep )
         zoxide? ( app-shells/zoxide )
