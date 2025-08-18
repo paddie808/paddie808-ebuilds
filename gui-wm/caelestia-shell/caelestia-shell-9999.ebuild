@@ -29,6 +29,7 @@ DEPEND="sys-apps/caelestia-cli
         gui-apps/grim
         gui-apps/swappy
         sci-libs/libqalculate
+        x11-themes/material-design-icons
         "
 RDEPEND=${DEPEND}
 
