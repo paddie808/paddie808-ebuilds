@@ -20,10 +20,10 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86 ~arm64"
 IUSE="7zip chafa fd ffmpeg fzf imagemagik jq poppler ripgrep zoxide"
  
-DEPEND="sys-app/file
+DEPEND="sys-apps/file
         7zip? ( app-arch/7zip )
         chafa? ( media-gfx/chafa )
-        fd? ( sys-app/fd )
+        fd? ( sys-apps/fd )
         ffmpeg? ( media-video/ffmpeg )
         fzf? ( app-shells/fzf )
         imagemagik? ( media-gfx/imagemagik )
