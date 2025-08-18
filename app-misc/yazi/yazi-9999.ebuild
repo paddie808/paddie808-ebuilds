@@ -17,7 +17,7 @@ fi
  
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~arm64"
 IUSE="7zip chafa fd ffmpeg fzf imagemagik jq poppler ripgrep zoxide"
  
 DEPEND="sys-app/file
