@@ -15,7 +15,6 @@ LICENSE="MIT"
 SLOT="0"
 IUSE=""
 REQUIRED_USE=""
-KEYWORDS="~amd64 ~arm64"
 
 BEPEND="
     virtual/pkgconfig
@@ -34,7 +33,7 @@ if [[ ${PV} == 9999 ]]; then
 	EGIT_REPO_URI="https://github.com/T-Dynamos/materialyoucolor-python.git"
 	EGIT_BRANCH="main"
 	SRC_URI=""
-	KEYWORDS=""
+	KEYWORDS="~amd64 ~arm ~arm64 ~x86"
 else
 	# Strip all underscores from this package's version (e.g., reduce
 	# "2.3.0_rc3" to "2.3.0rc3").
