@@ -3,6 +3,7 @@
 
 EAPI=8
 
+RESTRICT="network-sandbox"
 DISTUTILS_USE_PEP517=setuptools
 EPYTHON=/usr/bin/python
 PYTHON_COMPAT=( python3_{10..13} )
