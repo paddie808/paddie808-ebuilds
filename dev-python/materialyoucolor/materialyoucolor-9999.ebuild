@@ -15,6 +15,7 @@ LICENSE="MIT"
 SLOT="0"
 IUSE=""
 REQUIRED_USE=""
+KEYWORDS="~amd64 ~arm64"
 
 BEPEND="
     virtual/pkgconfig
