@@ -12,7 +12,7 @@ else
 	SRC_URI="https://github.com/sxyazi/${PN^}/archive/refs/tags/v${PV}.tar.gz -> ${P}.gh.tar.gz"
 	S="${WORKDIR}/${PN}-source"
 
-	KEYWORDS="~amd64"
+	KEYWORDS="~amd64 ~arm64"
 fi
  
 LICENSE="MIT"
