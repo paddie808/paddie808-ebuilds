@@ -30,7 +30,6 @@ DEPEND="dev-lang/python
         media-video/wl-screenrec
         gnome-base/dconf
         media-libs/libpulse
-        app-misc/cliphist
         "
 RDEPEND=${DEPEND}
 
