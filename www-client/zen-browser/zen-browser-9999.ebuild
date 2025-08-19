@@ -27,7 +27,8 @@ BDEPEND="dev-vcs/git
          net-misc/curl
          dev-lang/python
          dev-python/pip
-         net-libs/nodejs"
+         net-libs/nodejs[npm]
+         dev-util/cbindgen"
 
 src_prepare() {
     npm i || die
