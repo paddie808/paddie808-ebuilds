@@ -39,5 +39,5 @@ src_prepare() {
 }
 
 src_compile() {
-    npm run build --with-libclang-path=/usr/lib/clang || die
+    npm run build --with-libclang-path="$(llvm-config --libdir)" || die
 }
