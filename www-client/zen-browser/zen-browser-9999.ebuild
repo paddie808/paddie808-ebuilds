@@ -28,7 +28,8 @@ BDEPEND="dev-vcs/git
          dev-lang/python
          dev-python/pip
          net-libs/nodejs[npm]
-         dev-util/cbindgen"
+         dev-util/cbindgen
+         dev-util/bindgen"
 
 src_prepare() {
     npm i || die
@@ -38,5 +39,5 @@ src_prepare() {
 }
 
 src_compile() {
-    npm run build || die
+    npm run build --with-libclang-path=/usr/lib/clang || die
 }
