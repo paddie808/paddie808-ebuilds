@@ -30,11 +30,12 @@ BDEPEND="dev-vcs/git
          net-libs/nodejs"
 
 src_prepare() {
-    npm i
-    npm run init
-    python ./scripts/update_en_US_packs.py
+    npm i || die
+    npm run init || die
+    python ./scripts/update_en_US_packs.py || die
+    eapply_user
 }
 
 src_compile() {
-    npm run build
+    npm run build || die
 }
