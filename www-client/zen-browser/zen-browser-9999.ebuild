@@ -35,6 +35,7 @@ src_prepare() {
     npm i || die
     npm run init || die
     python ./scripts/update_en_US_packs.py || die
+    npm run bootstrap
     eapply_user
 }
 
