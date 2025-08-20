@@ -3,7 +3,7 @@
 
 EAPI=8
 
-EGIT_CLONE_TYPE=shallow
+EGIT_CLONE_TYPE=single
 EPYTHON=/usr/bin/python
 PYTHON_COMPAT=( python3_{10..13} )
 
@@ -35,7 +35,7 @@ src_prepare() {
     npm i || die
     npm run init || die
     python ./scripts/update_en_US_packs.py || die
-    npm run bootstrap
+    npm run bootstrap || die
     eapply_user
 }
 
