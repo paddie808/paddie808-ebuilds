@@ -8,7 +8,7 @@ PYTHON_COMPAT=( python3_{10..13} )
 
 inherit git-r3
 
-RESTRICT="sandbox"
+RESTRICT="network-sandbox sandbox userpriv"
 
 DESCRIPTION="Welcome to a calmer internet "
 HOMEPAGE="https://zen-browser.app"
