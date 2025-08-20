@@ -31,6 +31,8 @@ BDEPEND="dev-vcs/git
          dev-util/bindgen"
 
 src_prepare() {
+    git config --global user.email "rr151panda@outlook.com"
+    git config --global user.name "Paddy Milner"
     npm i || die
     npm run init || die
     python ./scripts/update_en_US_packs.py || die
