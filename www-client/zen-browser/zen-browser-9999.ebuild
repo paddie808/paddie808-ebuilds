@@ -3,7 +3,6 @@
 
 EAPI=8
 
-EGIT_CLONE_TYPE=single
 EPYTHON=/usr/bin/python
 PYTHON_COMPAT=( python3_{10..13} )
 
