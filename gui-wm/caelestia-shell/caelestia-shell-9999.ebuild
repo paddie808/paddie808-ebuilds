@@ -56,7 +56,7 @@ src_compile() {
 
     cd ${S}/plugin
 
-    cmake_build -B build -G Ninja -DCMAKE_BUILD_TYPE=Release -DINSTALL_QMLDIR=/usr/lib/qt6/qml
+    cmake_build -DCMAKE_BUILD_TYPE=Release -DINSTALL_QMLDIR=/usr/lib/qt6/qml
     cmake_build --build build
 }
 
