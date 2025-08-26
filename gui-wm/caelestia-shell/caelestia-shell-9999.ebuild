@@ -32,7 +32,7 @@ DEPEND="sys-apps/caelestia-cli
         dev-libs/wayland
         app-shells/bash
         dev-qt/qtbase
-        dev-qt/declarative
+        dev-qt/qtdeclarative
         "
 RDEPEND=${DEPEND}
 
