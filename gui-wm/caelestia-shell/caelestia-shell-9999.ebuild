@@ -42,6 +42,8 @@ BDEPEND="dev-vcs/git
          dev-build/cmake
          dev-build/ninja"
 
+CMAKE_USE_DIR=${S}/plugin
+
 src_compile() {
     cd ${S}/assets
     g++ $CXXFLAGS -std=c++17 -Wall -Wextra -I/usr/include/pipewire-0.3 -I/usr/include/spa-0.2 -I/usr/include/aubio -o beat_detector beat_detector.cpp -lpipewire-0.3 -laubio $LDFLAGS
@@ -54,7 +56,6 @@ src_compile() {
 
     cd ${S}/plugin
 
-    CMAKE_USE_DIR=${S}/plugin
     cmake_build -B build -G Ninja -DCMAKE_BUILD_TYPE=Release -DINSTALL_QMLDIR=/usr/lib/qt6/qml
     cmake_build --build build
 }
