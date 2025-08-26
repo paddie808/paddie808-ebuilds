@@ -26,10 +26,6 @@ BDEPEND="dev-vcs/git
          sys-devel/gcc
          || ( dev-lang/rust dev-lang/rust-bin )"
 
-src_unpack() {
-    git-r3_fetch
-    cargo_live_src_unpack
-}
 
 src_compile() {
     cargo_scr_compile
