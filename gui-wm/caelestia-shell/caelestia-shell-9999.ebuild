@@ -67,8 +67,7 @@ src_compile() {
 
     cd ${S}/plugin
 
-    cmake_build
-    cmake_build --build build
+    cmake_src_compile
 }
 
 src_install() {
