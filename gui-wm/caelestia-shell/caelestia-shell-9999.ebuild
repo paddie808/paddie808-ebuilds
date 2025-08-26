@@ -44,6 +44,17 @@ BDEPEND="dev-vcs/git
 
 CMAKE_USE_DIR=${S}/plugin
 
+src_prepare() {
+    cmake_src_prepare
+}
+
+src_configure() {
+    local mycmakeargs=(
+                -DCMAKE_BUILD_TYPE=Release -DINSTALL_QMLDIR=/usr/lib/qt6/qml
+        )
+        cmake_src_configure
+}
+
 src_compile() {
     cd ${S}/assets
     g++ $CXXFLAGS -std=c++17 -Wall -Wextra -I/usr/include/pipewire-0.3 -I/usr/include/spa-0.2 -I/usr/include/aubio -o beat_detector beat_detector.cpp -lpipewire-0.3 -laubio $LDFLAGS
@@ -56,7 +67,7 @@ src_compile() {
 
     cd ${S}/plugin
 
-    cmake_build -DCMAKE_BUILD_TYPE=Release -DINSTALL_QMLDIR=/usr/lib/qt6/qml
+    cmake_build
     cmake_build --build build
 }
 
