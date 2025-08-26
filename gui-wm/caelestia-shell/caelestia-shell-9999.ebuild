@@ -3,7 +3,7 @@
 
 EAPI=8
 
-inherit git-r3
+inherit git-r3 cmake
 
 DESCRIPTION="The desktop shell for the Caelestia dotfiles"
 HOMEPAGE="https://github.com/caelestia-dots/shell"
@@ -54,8 +54,8 @@ src_compile() {
 
     cd ${S}/plugin
 
-    cmake -B build -G Ninja -DCMAKE_BUILD_TYPE=Release -DINSTALL_QMLDIR=/usr/lib/qt6/qml
-    cmake --build build
+    cmake_build -B build -G Ninja -DCMAKE_BUILD_TYPE=Release -DINSTALL_QMLDIR=/usr/lib/qt6/qml
+    cmake_build --build build
 }
 
 src_install() {
@@ -66,7 +66,7 @@ src_install() {
     install -Dm755 ./assets/cpp/inhibit_idle ${D}/usr/lib/caelestia/inhibit_idle
     rm ./assets/cpp/inhibit_idle
 
-    DESTDIR={$D} cmake --install plugin/build
+    cmake_src_install
     rm -rf plugin/build
 
     install -dm755 ${D}/etc/xdg/quickshell/caelestia
