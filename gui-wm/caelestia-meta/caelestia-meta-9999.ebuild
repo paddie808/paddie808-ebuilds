@@ -29,7 +29,6 @@ RDEPEND="sys-apps/caelestia-cli
          sys-process/btop
          app-misc/jq
          net-misc/socat
-         media-gfx/imagemagick
          net-misc/curl
          x11-themes/papirus-icon-theme
          x11-misc/qt5ct
