@@ -27,6 +27,7 @@ BDEPEND="dev-vcs/git
          || ( dev-lang/rust dev-lang/rust-bin )"
 
 src_unpack() {
+    git-r3_fetch
     cargo_live_src_unpack
 }
 
