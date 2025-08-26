@@ -14,11 +14,11 @@ LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~arm64"
 
-IUSE="dbus samba"
+IUSE="dbus smb"
 
 DEPEND="dev-libs/openssl
         dbus? ( sys-apps/dbus )
-        samba? ( net-fs/samba )
+        smb? ( net-fs/samba )
         "
 RDEPEND=${DEPEND}
 
@@ -29,6 +29,13 @@ BDEPEND="dev-vcs/git
 src_unpack() {
     git-r3_src_unpack
     cargo_live_src_unpack
+}
+
+src_configure() {
+        local myfeatures=(
+                $(usev smb)
+        )
+        cargo_src_configure
 }
 
 src_compile() {
