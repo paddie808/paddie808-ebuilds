@@ -14,10 +14,10 @@ LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~arm64"
 
-IUSE="dbus smb"
+IUSE="keyring smb"
 
 DEPEND="dev-libs/openssl
-        dbus? ( sys-apps/dbus )
+        keyring? ( sys-apps/dbus )
         smb? ( net-fs/samba )
         "
 RDEPEND=${DEPEND}
@@ -34,8 +34,9 @@ src_unpack() {
 src_configure() {
         local myfeatures=(
                 $(usev smb)
+                $(usev keyring)
         )
-        cargo_src_configure
+        cargo_src_configure --no-default-features
 }
 
 src_compile() {
