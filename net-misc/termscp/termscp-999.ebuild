@@ -24,7 +24,7 @@ RDEPEND=${DEPEND}
 
 BDEPEND="dev-vcs/git
          sys-devel/gcc
-         || ( dev-lang/rust dev-land/rust-bin )"
+         || ( dev-lang/rust dev-lang/rust-bin )"
 
 src_unpack() {
     cargo_live_src_unpack
