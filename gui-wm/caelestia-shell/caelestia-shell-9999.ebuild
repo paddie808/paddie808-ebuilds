@@ -29,11 +29,18 @@ DEPEND="sys-apps/caelestia-cli
         gui-apps/grim
         gui-apps/swappy
         sci-libs/libqalculate
+        dev-libs/wayland
+        app-shells/bash
+        dev-qt/qtbase
+        dev-qt/declarative
         "
 RDEPEND=${DEPEND}
 
 BDEPEND="dev-vcs/git
-         sys-devel/gcc"
+         sys-devel/gcc
+         dev-libs/wayland-protocols
+         dev-build/cmake
+         dev-build/ninja"
 
 src_compile() {
     cd ${S}/assets
