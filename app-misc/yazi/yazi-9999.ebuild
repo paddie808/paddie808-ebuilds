@@ -61,9 +61,9 @@ src_install() {
     if use cli ; then
         dobin target/release/ya
 
-        dobashcomp yazi-cli/completions/yazi.bash
-        dofishcomp yazi-cli/completions/yazi.fish
-        dozshcomp yazi-cli/completions/_yazi
+        dobashcomp yazi-cli/completions/ya.bash
+        dofishcomp yazi-cli/completions/ya.fish
+        dozshcomp yazi-cli/completions/_ya
     fi
 
     domenu assets/${PN}.desktop
