@@ -68,3 +68,11 @@ src_install() {
 
     domenu assets/${PN}.desktop
 }
+
+pkg_postinst() {
+    xdg_desktop_database_update()
+}
+
+pkg_postrm() {
+    xdg_desktop_database_update()
+}
