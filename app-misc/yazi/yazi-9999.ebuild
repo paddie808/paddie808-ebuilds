@@ -1,6 +1,6 @@
 EAPI=8
 
-inherit cargo desktop
+inherit cargo desktop shell-completion
  
 DESCRIPTION="Blazing fast terminal file manager written in Rust, based on async I/O."
 HOMEPAGE="https://yazi-rs.github.io"
@@ -18,7 +18,7 @@ fi
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~arm64"
-IUSE="7zip chafa fd ffmpeg fzf imagemagik jq poppler ripgrep zoxide"
+IUSE="7zip chafa fd ffmpeg fzf imagemagik jq poppler ripgrep zoxide cli"
  
 DEPEND="sys-apps/file
         7zip? ( app-arch/7zip )
@@ -42,6 +42,8 @@ src_unpack() {
 
 src_prepare() {
     cargo_gen_config
+    export YAZI_GEN_COMPLETIONS=true
+    cargo_src_configure --release
     eapply_user
 }
 
@@ -50,7 +52,19 @@ src_compile() {
 }
 
 src_install() {
-    dobin "$(cargo_target_dir)/${PN}"
+    dobin target/release/yazi
+
+    dobashcomp yazi-boot/completions/yazi.bash
+    dofishcomp yazi-boot/completions/yazi.fish
+    dozshcomp yazi-boot/completions/_yazi
+
+    if use cli ; then
+        dobin target/release/ya
+
+        dobashcomp yazi-cli/completions/yazi.bash
+        dofishcomp yazi-cli/completions/yazi.fish
+        dozshcomp yazi-cli/completions/_yazi
+    fi
 
     domenu assets/${PN}.desktop
 }
