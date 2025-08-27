@@ -63,6 +63,6 @@ src_compile() {
 src_install() {
     cd ${S}
     
-    DESTDIR="$pkgdir" cmake --install build
+    DESTDIR=${D} cmake --install build
     install -Dm644 LICENSE ${D}/usr/share/licenses/${PN}/LICENSE
 }
