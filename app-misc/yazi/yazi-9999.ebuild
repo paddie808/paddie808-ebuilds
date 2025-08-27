@@ -18,7 +18,7 @@ fi
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~arm64"
-IUSE="7zip chafa fd ffmpeg fzf imagemagik jq poppler ripgrep zoxide cli"
+IUSE="7zip chafa fd ffmpeg fzf imagemagick jq poppler ripgrep zoxide cli"
  
 DEPEND="sys-apps/file
         7zip? ( app-arch/7zip )
@@ -26,7 +26,7 @@ DEPEND="sys-apps/file
         fd? ( sys-apps/fd )
         ffmpeg? ( media-video/ffmpeg )
         fzf? ( app-shells/fzf )
-        imagemagik? ( media-gfx/imagemagick )
+        imagemagick? ( media-gfx/imagemagick )
         jq? ( app-misc/jq )
         poppler? ( app-text/poppler )
         ripgrep? ( sys-apps/ripgrep )
