@@ -19,8 +19,8 @@ LICENSE="GPL-3.0"
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~arm64"
  
-DEPEND="gui-libs/gtk
-        "
+DEPEND="gui-libs/gtk"
+
 RDEPEND="${DEPEND}"
 BDEPEND="dev-vcs/git"
 
